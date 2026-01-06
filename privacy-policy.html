@@ -6,19 +6,21 @@
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; line-height: 1.6; color: #333; }
     h1 { color: #0A66C2; border-bottom: 2px solid #0A66C2; padding-bottom: 10px; }
     h2 { color: #0A66C2; margin-top: 30px; }
+    h3 { color: #0A66C2; margin-top: 20px; }
     ul { margin: 10px 0; padding-left: 20px; }
     li { margin: 5px 0; }
     strong { color: #0A66C2; }
     .contact { background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0; }
+    .feature-highlight { background: #e8f4ff; padding: 15px; border-left: 4px solid #0A66C2; border-radius: 4px; margin: 20px 0; }
   </style>
 </head>
 <body>
   <h1>InSearch - Privacy Policy</h1>
-  <p><em>Last updated: September 16, 2025</em></p>
-  
+  <p><em>Last updated: January 6, 2026</em></p>
+
   <h2>Overview</h2>
   <p>InSearch is a Chrome extension that enhances your LinkedIn job search experience. This privacy policy explains how we handle your data and protect your privacy.</p>
-  
+
   <h2>Data Collection</h2>
   <h3>What We DON'T Collect</h3>
   <ul>
@@ -28,55 +30,96 @@
     <li>Analytics or tracking data</li>
     <li>Any data transmission to external servers</li>
     <li>LinkedIn login credentials or profile data</li>
+    <li>URL navigation patterns or page visit information</li>
   </ul>
-  
+
   <h3>What We Store Locally</h3>
   <ul>
     <li>Your saved search configurations</li>
-    <li>Extension settings and preferences</li>
+    <li>Extension settings and preferences (including news feed blocking preference)</li>
     <li>Company blocklist (stored in your browser only)</li>
     <li>Saved job search criteria</li>
   </ul>
-  
+
   <h2>Data Storage</h2>
   <p>All data is stored locally in your browser using Chrome's secure storage API. <strong>No data ever leaves your device or browser.</strong> There are no external servers, cloud storage, or data transmission.</p>
-  
+
+  <h2>News Feed Blocking Feature</h2>
+  <div class="feature-highlight">
+    <p><strong>What It Does:</strong> The "Block News Feed" feature helps you stay focused on job searching by automatically redirecting you from LinkedIn's news feed to the jobs page.</p>
+
+    <h3>Data Collection</h3>
+    <ul>
+      <li>Monitors your current LinkedIn URL when the feature is enabled</li>
+      <li>Stores your on/off preference locally in Chrome storage</li>
+      <li>No URL data or browsing patterns are transmitted externally</li>
+    </ul>
+
+    <h3>How It Works</h3>
+    <ul>
+      <li>Checks your current page URL every 500ms (only while feature is enabled)</li>
+      <li>Detects when you navigate to LinkedIn's news feed</li>
+      <li>Displays an overlay notification for 2.5 seconds</li>
+      <li>Automatically redirects you to the jobs search page</li>
+      <li>All processing happens locally in your browser</li>
+    </ul>
+
+    <h3>Your Control</h3>
+    <ul>
+      <li>Toggle the feature on/off anytime through the extension popup</li>
+      <li>Your preference is saved locally and persists across sessions</li>
+      <li>Disabling stops all URL monitoring immediately</li>
+    </ul>
+
+    <h3>Privacy Guarantee</h3>
+    <p>We do <strong>not</strong> collect, store, or transmit any information about:</p>
+    <ul>
+      <li>Which pages you visit</li>
+      <li>How often you visit the news feed</li>
+      <li>When the redirect occurs</li>
+      <li>Your browsing patterns</li>
+    </ul>
+    <p>This feature operates entirely within your browser with zero external communication.</p>
+  </div>
+
   <h2>Permissions</h2>
   <ul>
     <li><strong>activeTab:</strong> To enhance LinkedIn job pages</li>
     <li><strong>storage:</strong> To save your preferences locally</li>
     <li><strong>https://www.linkedin.com/*:</strong> To function exclusively on LinkedIn</li>
   </ul>
-  
+
   <h2>How the Extension Works</h2>
   <ol>
-    <li>You configure search parameters -> Stored locally in your browser</li>
-    <li>You save a search -> Stored locally in your browser</li>
-    <li>You block a company -> Added to your local blocklist</li>
-    <li>Extension filters LinkedIn job results -> Processing happens locally</li>
+    <li>You configure search parameters → Stored locally in your browser</li>
+    <li>You save a search → Stored locally in your browser</li>
+    <li>You block a company → Added to your local blocklist</li>
+    <li>You enable news feed blocking → Preference saved locally, URL monitoring starts</li>
+    <li>Extension filters LinkedIn job results → Processing happens locally</li>
     <li><strong>No data leaves your browser at any point</strong></li>
   </ol>
-  
+
   <h2>Third-Party Services</h2>
   <p>The extension operates on LinkedIn's public website interface. We do not use LinkedIn's private APIs and are not affiliated with LinkedIn Corporation. Users must comply with LinkedIn's Terms of Service independently.</p>
-  
+
   <h2>User Rights</h2>
   <ul>
     <li><strong>Data Access:</strong> View all extension data through the popup interface</li>
     <li><strong>Data Control:</strong> Edit, delete, or clear all data at any time</li>
+    <li><strong>Feature Control:</strong> Enable or disable any feature (including news feed blocking) instantly</li>
     <li><strong>Uninstallation:</strong> Removes all stored data completely</li>
   </ul>
-  
+
   <div class="contact">
     <h2>Contact</h2>
     <p>Questions about this privacy policy or data practices?</p>
     <p><strong>Email:</strong> contact.evgenii@gmail.com</p>
     <p><strong>Developer:</strong> <a href="https://www.linkedin.com/in/shvetsovea/" target="_blank">Evgenii Shvetsov on LinkedIn</a></p>
   </div>
-  
+
   <h2>Compliance</h2>
   <p>This extension complies with major privacy regulations (GDPR, CCPA, etc.) through minimal local-only data processing, user control over all data, and transparency in privacy practices.</p>
-  
+
   <p><em>This privacy policy is effective as of the date listed above and governs the use of InSearch extension.</em></p>
 </body>
 </html>
